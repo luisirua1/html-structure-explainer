@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomía de una Web - Explainer Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="tooltip" class="tooltip">
+        <h3 id="tooltip-title"></h3>
+        <p id="tooltip-desc"></p>
+    </div>
+
+    <div class="website-container">
+        <!-- Header -->
+        <header class="semantic-element" data-tag="<header>" data-title="Cabecera (<header>)" data-desc="Representa el área introductoria. Usualmente contiene el logotipo, enlaces principales y, a veces, un formulario de búsqueda.">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>WebAnatomy</span>
+            </div>
+            
+            <!-- Nav -->
+            <nav class="semantic-element" data-tag="<nav>" data-title="Navegación (<nav>)" data-desc="Define una sección que contiene enlaces de navegación principales. No todos los grupos de enlaces necesitan un <nav>.">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Artículos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn-primary">Entrar</button>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Main Content -->
+            <main class="semantic-element" data-tag="<main>" data-title="Contenido Principal (<main>)" data-desc="Especifica el contenido central del documento. Debe ser único y no estar contenido en etiquetas como <aside> o <header>.">
+                
+                <!-- Section (Hero) -->
+                <section class="semantic-element hero-section" data-tag="<section>" data-title="Sección (<section>)" data-desc="Agrupa contenido temático. Generalmente contiene un encabezado. Aquí funciona como el área destacada o 'hero'.">
+                    <div class="hero-content">
+                        <h1>Descubre la Estructura Web</h1>
+                        <p>Pasa el ratón por encima de los elementos para entender qué etiqueta HTML5 los define y por qué se utilizan.</p>
+                        <button class="btn-secondary">Saber más</button>
+                    </div>
+                </section>
+
+                <!-- Section (Articles) -->
+                <section class="semantic-element articles-section" data-tag="<section>" data-title="Sección (<section>)" data-desc="Otra agrupación de contenido, en este caso para listar una serie de entradas independientes.">
+                    <h2>Últimas Novedades</h2>
+                    <div class="articles-grid">
+                        
+                        <!-- Article 1 -->
+                        <article class="semantic-element" data-tag="<article>" data-title="Artículo (<article>)" data-desc="Contenido independiente y autónomo que tiene sentido por sí mismo, como un post de blog, noticia o foro.">
+                            <figure class="semantic-element" data-tag="<figure>" data-title="Figura (<figure>)" data-desc="Representa contenido independiente, frecuentemente con un título (figcaption). Perfecto para imágenes con descripción.">
+                                <!-- Image -->
+                                <img class="semantic-element" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Código en pantalla" data-tag="<img>" data-title="Imagen (<img>)" data-desc="Inserta una imagen en el documento.">
+                            </figure>
+                            <div class="article-content">
+                                <h3>El Poder de HTML5</h3>
+                                <p>La semántica ayuda a los navegadores y a los lectores de pantalla a entender tu sitio de manera eficiente.</p>
+                                <a href="#" class="read-more">Leer más &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="semantic-element" data-tag="<article>" data-title="Artículo (<article>)" data-desc="Contenido independiente. Puede sindicarse y reutilizarse en otros lugares, manteniendo su significado.">
+                            <figure class="semantic-element" data-tag="<figure>" data-title="Figura (<figure>)" data-desc="Representa contenido independiente, frecuentemente con un título (figcaption).">
+                                <!-- Image -->
+                                <img class="semantic-element" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Programación" data-tag="<img>" data-title="Imagen (<img>)" data-desc="Inserta una imagen en el documento.">
+                            </figure>
+                            <div class="article-content">
+                                <h3>Diseño Accesible</h3>
+                                <p>Estructurar bien tu web es el primer paso para una accesibilidad excepcional para todos los usuarios.</p>
+                                <a href="#" class="read-more">Leer más &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Aside -->
+            <aside class="semantic-element" data-tag="<aside>" data-title="Barra Lateral (<aside>)" data-desc="Contenido tangencialmente relacionado con el contenido a su alrededor, como barras laterales, publicidad o biografía del autor.">
+                <div class="widget">
+                    <h3>Sobre el Autor</h3>
+                    <div class="author-info">
+                        <div class="avatar">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <p>Experto en UI/UX y desarrollo web moderno.</p>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="#">Semántica web</a></li>
+                        <li><a href="#">CSS Moderno</a></li>
+                        <li><a href="#">Accesibilidad</a></li>
+                    </ul>
+                </div>
+                
+                <div class="widget ad-space">
+                    <p>Espacio Publicitario</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="semantic-element" data-tag="<footer>" data-title="Pie de Página (<footer>)" data-desc="Representa el cierre de su sección o documento principal. Contiene información de derechos de autor, enlaces, etc.">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>WebAnatomy</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                </div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 WebAnatomy. Todos los derechos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Instruction overlay -->
+    <div class="instruction-overlay" id="instruction-overlay">
+        <div class="overlay-content">
+            <i class="fa-solid fa-mouse-pointer pulse"></i>
+            <h2>Explora la Estructura</h2>
+            <p>Pasa el cursor por encima de cualquier parte de la página de demostración para descubrir su estructura HTML subyacente.</p>
+            <button class="btn-primary" id="start-btn">¡Entendido!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

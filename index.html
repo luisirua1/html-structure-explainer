@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura HTML - Presentación</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for explanations -->
+        <aside class="explanation-panel">
+            <h1>Anatomía de HTML</h1>
+            <p class="subtitle">Interactúa con los elementos visuales para aprender más sobre su función en la estructura de una página web.</p>
+            
+            <div id="info-box" class="info-box default-state">
+                <h2>&lt;html&gt;</h2>
+                <p>El elemento raíz. Todo el contenido de la página web se encuentra dentro de este elemento. Es el contenedor principal de tu sitio.</p>
+            </div>
+        </aside>
+
+        <!-- Visual representation of the page structure -->
+        <main class="visualizer">
+            <div class="browser-window">
+                <div class="browser-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <div class="address-bar">misitio.com</div>
+                </div>
+                
+                <div class="code-container html-element" data-tag="html" data-title="&lt;html&gt;" data-desc="El elemento raíz que envuelve todo el contenido de la página.">
+                    <span class="tag-label">&lt;html&gt;</span>
+                    
+                    <div class="code-container head-element" data-tag="head" data-title="&lt;head&gt;" data-desc="Contiene metadatos, enlaces a hojas de estilo, scripts y el título de la página. No es visible directamente en el lienzo de la página.">
+                        <span class="tag-label">&lt;head&gt;</span>
+                        <div class="element-box meta-element" data-tag="meta" data-title="&lt;meta&gt; / &lt;title&gt;" data-desc="Define la configuración de caracteres, la descripción para SEO y el texto que aparece en la pestaña del navegador.">
+                            Configuraciones, Enlaces y Título
+                        </div>
+                    </div>
+
+                    <div class="code-container body-element" data-tag="body" data-title="&lt;body&gt;" data-desc="Contiene todo el contenido visible de la página web (textos, imágenes, enlaces, etc). Es el cuerpo del documento.">
+                        <span class="tag-label">&lt;body&gt;</span>
+                        
+                        <header class="semantic-element" data-tag="header" data-title="&lt;header&gt;" data-desc="Representa el encabezado introductorio de la página o de una sección. Suele contener el logo y el título principal.">
+                            <span class="tag-label">&lt;header&gt;</span>
+                            <nav class="semantic-element" data-tag="nav" data-title="&lt;nav&gt;" data-desc="Sección que contiene los enlaces de navegación principal del sitio web.">
+                                <span class="tag-label">&lt;nav&gt;</span>
+                                Menú de Navegación
+                            </nav>
+                        </header>
+
+                        <div class="layout-flex">
+                            <main class="semantic-element flex-grow" data-tag="main" data-title="&lt;main&gt;" data-desc="El contenido principal y único del documento. No debe haber más de un elemento &lt;main&gt; visible.">
+                                <span class="tag-label">&lt;main&gt;</span>
+                                
+                                <section class="semantic-element" data-tag="section" data-title="&lt;section&gt;" data-desc="Una agrupación temática de contenido, generalmente con su propio encabezado. Sirve para dividir la página en zonas lógicas.">
+                                    <span class="tag-label">&lt;section&gt;</span>
+                                    <article class="semantic-element" data-tag="article" data-title="&lt;article&gt;" data-desc="Contenido independiente y autónomo que tiene sentido por sí solo, como una publicación de blog o una noticia.">
+                                        <span class="tag-label">&lt;article&gt;</span>
+                                        Contenido del Artículo
+                                    </article>
+                                </section>
+                            </main>
+
+                            <aside class="semantic-element sidebar-element" data-tag="aside" data-title="&lt;aside&gt;" data-desc="Contenido relacionado indirectamente con el contenido principal (ej. barra lateral con enlaces extra, biografía del autor o publicidad).">
+                                <span class="tag-label">&lt;aside&gt;</span>
+                                Barra Lateral
+                            </aside>
+                        </div>
+
+                        <footer class="semantic-element" data-tag="footer" data-title="&lt;footer&gt;" data-desc="El pie de página del documento o sección. Suele contener información de copyright, enlaces legales y datos de contacto.">
+                            <span class="tag-label">&lt;footer&gt;</span>
+                            Pie de Página
+                        </footer>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
